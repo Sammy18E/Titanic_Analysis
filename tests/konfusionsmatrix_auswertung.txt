@@ -1,0 +1,37 @@
+Hier siehst du eine Konfusionsmatrix aus deinem Klassifikationsmodell für das Titanic-Datenset. Die Werte lauten:
+
+True Negatives (TN) = 89
+(Tatsächlich „Nicht überlebt“, vom Modell auch als „Nicht überlebt“ vorhergesagt)
+False Positives (FP) = 20
+(Tatsächlich „Nicht überlebt“, vom Modell jedoch fälschlicherweise als „Überlebt“ vorhergesagt)
+False Negatives (FN) = 15
+(Tatsächlich „Überlebt“, vom Modell jedoch fälschlicherweise als „Nicht überlebt“ vorhergesagt)
+True Positives (TP) = 54
+(Tatsächlich „Überlebt“, vom Modell korrekt als „Überlebt“ vorhergesagt)
+
+Damit ergeben sich folgende Metriken:
+
+Genauigkeit:
+Accuracy = (TP + TN) / (TP + TN + FP + FN) = (54 + 89) / (54 + 89 + 20 + 15) ≈ 0.803 (80.3%)
+
+Präzision:
+Precision = TP / (TP + FP) = 54 / (54 + 20) ≈ 0.730 (73.0%)
+
+Rückruf (Sensitivität):
+Recall = TP / (TP + FN) = 54 / (54 + 15) ≈ 0.783 (78.3%)
+
+F1-Score:
+F1 = 2 * (Precision * Recall) / (Precision + Recall) ≈ 0.756 (75.6%)
+
+Interpretation:
+- Hohe True Negatives (89) und True Positives (54) zeigen, dass das Modell viele Fälle korrekt klassifiziert.
+- False Positives (20): Falsch als Überlebende vorhergesagt.
+- False Negatives (15): Falsch als Nicht-Überlebende vorhergesagt.
+- Eine Genauigkeit von 80.3% ist gut, könnte aber verbessert werden.
+- Recall von 78.3% zeigt, dass 22% der tatsächlichen Überlebenden nicht korrekt erkannt wurden.
+- Präzision von 73.0% bedeutet, dass von allen vorhergesagten Überlebenden etwa 27% tatsächlich nicht überlebt haben.
+
+Verbesserungspotential:
+- Feature Engineering für bessere Merkmale
+- Hyperparameter-Tuning des Modells
+- Einsatz anderer Klassifikationsverfahren
