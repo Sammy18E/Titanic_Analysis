@@ -11,28 +11,59 @@ Unsere Schwerpunkte sind:
 
 ---
 
+Das Projekt besteht aus mehreren Notebooks.  
+**Mein eigener Schwerpunkt liegt auf dem Notebook `hafen_analyse_sammy.ipynb`.**
+
+---
+
+## Mein Beitrag (Notebook: `hafen_analyse_sammy.ipynb`)
+
+Ich habe eine umfassende Analyse zu **Einstiegshäfen (Embarked)** durchgeführt und **12 Visualisierungen** erstellt.  
+Diese untersuchen folgende Fragestellungen:
+
+### **Datenanalysen & Visualisierungen**
+- Überlebende nach Einstiegshafen  
+- Überlebensrate nach Einstiegshafen und Geschlecht  
+- Überlebensrate nach Geschlecht in *Cherbourg, Queenstown und Southampton*  
+- Überlebende nach Einstiegshafen und Geschlecht  
+- Überlebende nach Einstiegshafen (Mann, Frau, Kind)  
+- Überlebensrate nach Passagieren in *Cherbourg, Queenstown und Southampton*  
+- Überlebende nach Einstiegshafen und Klasse  
+- Überlebensrate nach Klasse in *Cherbourg, Queenstown und Southampton*  
+- Überlebende nach Einstiegshafen und Altersgruppen  
+- Überlebensrate nach Einstiegshafen und Altersgruppen  
+- Überlebensrate nach Altersgruppe in *Cherbourg, Queenstown und Southampton*
+
+### **Verwendete Diagrammtypen**
+- Säulendiagramme  
+- Balkendiagramme  
+- Kreisdiagramme  
+- Scatterplots  
+
+---
+
 ### **Ordnerstruktur**
 
 ```
 Titanic_Analysis/
-├── README.md                               # Projektbeschreibung mit einer Übersicht über das Projekt
+├── README.md                                     # Projektbeschreibung mit einer Übersicht über das Projekt
 │
-├── main.ipynb                              # Main-Ausgabe der bereinigten Daten
+├── main.ipynb                                    # Haupt-Notebook mit der finalen Analyse und Ergebnissen
 │                                 
-├── data/                                   # Enthält alle Daten für die Analyse  
-│    ├── processed/                         # Vorverarbeitete Daten nach Bereinigung und Transformation  
-│        ├──  
-│    ├── titanic_kaggle
-│         ├── gender_submission.csv
-│         ├── test.csv
-│         ├── train.csv
+├── data/                                         # Enthält alle Daten für die Analyse  
+│    ├── processed/                               # Bereinigte & transformierte Daten   
+│    ├── titanic_kaggle                           # Original-Kaggle-Datensätze 
+│         ├── gender_submission.csv               # Beispiel-Submission für Kaggle-Wettbewerb
+│         ├── test.csv                            # Test-Daten ohne Überlebenslabel  
+│         ├── train.csv                           # Trainingsdaten mit Überlebenslabel
 │
-├── notebooks/                              # Jupyter Notebooks oder Python-Skripte für Analysen und Exploration  
-│    ├── titanic_analysis.ipnyb             # Hauptskript für die Datenanalyse  
-│    ├── ticket.ipynb
-│    ├── korrelation_datenpunkte.ipynb
+├── notebooks/                                    # Jupyter Notebooks oder Python-Skripte für Analysen und Exploration
+│    ├── hafen_analyse_sammy.ipynb                # Analyse der Überlebensraten nach Einstiegshafen (Embarked) inkl. 12 Visualisierungen
+│    ├── titanic_analysis.ipnyb                   # Hauptskript für die Datenanalyse (Team)
+│    ├── ticket.ipynb                             # Analyse von Ticket-Daten  
+│    ├── korrelation_datenpunkte.ipynb            # Untersuchung der Korrelationen zwischen Features
 │
-├── results/                                # Ergebnisse der Analysen, z. B. Diagramme und Berichte  
+├── results/                                      # Ergebnisse der Analysen, z. B. Diagramme und Berichte  
 │    ├── age_pclass.png
 │    ├── correlation_heatmap.png
 │    ├── family_alone.png
@@ -48,30 +79,43 @@ Titanic_Analysis/
 │    ├── ticket_summary_filtered.csv
 │    ├── ticket_summary.csv
 │
-├── src/                                    # Enthält den eigentlichen Code des Projekts, z. B. Funktionen und Modelle  
-│   ├── __pycache__
-│         ├── datenvorbereitung.cpython-313.pyc
-│         ├── utils.cpython-313.pyc
-│         ├── visualisierungen.cpython-313.pyc
+├── src/                                          # Quellcode für Datenverarbeitung & Modellierung  
+│   ├── __pycache__                               # Zwischengespeicherte kompilierte Python-Dateien 
+│   ├── datenvorbereitung.py                      # Laden & Bereinigen der Hauptdaten von Seaborn Datensatz ("titanic")
+│   ├── visualisierungen.py                       # Plots & Analysen
+│   ├── utils.py                                  # Hilfsfunktionen
 │
-│   ├── datenvorbereitung.py                # Laden & Bereinigen der Hauptdaten von Seaborn Datensatz ("titanic")
-│   ├── visualisierungen.py                 # Plots & Analysen
-│   ├── utils.py                            # Hilfsfunktionen
+├── tests/                                        # Test-Skripte zur Validierung der Analysen   
+│    ├── maschine_learning_fully_commented.ipynb  # Dokumentierte ML-Analyse 
+│    ├── konfusionsmatrix_auswertung.txt          # Bewertung der Konfusionsmatrix 
 │
-├── tests/                                  # Tests für den Code, um sicherzustellen, dass alles korrekt funktioniert  
-│    ├── maschine_learning_fully_commented.ipynb
-│    ├── konfusionsmatrix_auswertung.txt
-│
-└── requirements.txt                        # Liste der benötigten Python-Bibliotheken für das Projekt 
+└── requirements.txt                              # Liste der benötigten Python-Bibliotheken für das Projekt 
 ```
 
-### Hinweise für Nutzer
-```
-Die Anwendung wird durch titanic_analysis.py gestartet.
-Alle Module befinden sich im src/-Verzeichnis.
-Tests befinden sich im tests/-Verzeichnis und können mit pytest ausgeführt werden.
-Installiere Abhängigkeiten mit pip install -r requirements.txt.
-```
-### **Autor**
+---
 
-#### [Titanic Busters]
+## Technologien & Bibliotheken
+- Python  
+- Pandas  
+- Matplotlib  
+- Seaborn  
+- Jupyter Notebook  
+
+---
+
+## Verwendung  
+- Hauptanalyse: `titanic_analysis.ipynb`  
+- Meine Analyse: `notebooks/hafen_analyse_sammy.ipynb`  
+- Zusätzliche Funktionen im Ordner `src/`  
+- Tests im Ordner `tests/`
+
+---
+
+## Ziel des Projekts  
+Datenanalyse üben, Visualisierungen erstellen und Verständnis für Zusammenhänge zwischen  
+- Hafen  
+- Geschlecht  
+- Alter  
+- Klasse  
+- Überlebenswahrscheinlichkeit  
+gewinnen.
