@@ -105,7 +105,7 @@ Titanic_Analysis/
 
 ## Verwendung  
 - Hauptanalyse: `titanic_analysis.ipynb`  
-- Meine Analyse: `notebooks/hafen_analyse_sammy.ipynb`  
+- Meine Analyse: `hafen_analyse_sammy.ipynb`  
 - Zusätzliche Funktionen im Ordner `src/`  
 - Tests im Ordner `tests/`
 
@@ -117,5 +117,7 @@ Datenanalyse üben, Visualisierungen erstellen und Verständnis für Zusammenhä
 - Geschlecht  
 - Alter  
 - Klasse  
-- Überlebenswahrscheinlichkeit  
+- Überlebenswahrscheinlichkeit
+    
 gewinnen.
+
